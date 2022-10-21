@@ -19,7 +19,7 @@ namespace WindowsFormsApp3
         }
         class db
         {
-            MySqlConnection connectiON = new MySqlConnection("server=caseum.ru;port=33333;user=st_4_20_18;database=asd;password=96446255;");
+            MySqlConnection connectiON = new MySqlConnection("server=chuc.caseum.ru;port=33333;user=st_4_20_18;database=is_4_20_st18_KURS;password=96446255;");
             public void OpenConn()
             {
                 if(connectiON.State == System.Data.ConnectionState.Closed)
@@ -38,7 +38,11 @@ namespace WindowsFormsApp3
 
         private void metroButton1_Click(object sender, EventArgs e)
         {
-           
+            
+            db DB = new db();
+            DB.OpenConn();
+            MessageBox.Show("sad");
+            DB.ClosedConn();
         }
     }
 }
