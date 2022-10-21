@@ -33,6 +33,7 @@ namespace WindowsFormsApp3
             public MySqlConnection CheckConnection()
             {
                 return connectiON;
+                
             }
         }
 
